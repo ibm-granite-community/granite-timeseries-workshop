@@ -1,25 +1,177 @@
+---
+title: Granite Timeseries Workshop Pre-work
+description: Preparation for the Granite Timeseries Workshop
+logo: images/ibm-blue-background.png
+---
+
 # Pre-work
 
-This section is broken up into the following steps:
+The labs in the workshop are [Jupyter notebooks](https://jupyter.org/). The notebooks can be run on your computer or remotely on the [Google Colab](https://colab.research.google.com) service. Check out [Running the Granite Notebooks](#running-the-granite-notebooks) section on how to setup the way you want to run the notebooks.
 
-1. [Sign up for IBM Cloud](#1-sign-up-for-ibm-cloud)
-1. [Download or clone the repo](#2-download-or-clone-the-repo)
+## Running the Granite Notebooks
 
-## 1. Sign up for IBM Cloud
+The notebooks can be run:
 
-Ensure you have an IBM Cloud ID
+- [Locally on your computer](#running-the-granite-notebooks-locally) OR
+- [Remotely on the Google Colab service](#running-the-granite-notebooks-remotely-colab)
 
-![Cloud Sign up](../images/ibm-cloud-sign-up.png)
+Follow the instructions in one of the sections that follow on how you would like to run the notebooks.
 
-## 2. Download or clone the repo
+## Running the Granite Notebooks Locally
 
-Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. So let's get that done early on, you'll need [`git`](https://git-scm.com) on your laptop to clone the repository directly, or access to [GitHub.com](https://github.com/) to download the zip file.
+It is recommended if you want to run the lab notebooks locally on your computer that you have:
 
-To Download, go to the [GitHub repo for this workshop](https://github.com/IBM/workshop-template) and download the archived version of the workshop and extract it on your laptop.
+- A computer or laptop
+- Knowledge of [Git](https://git-scm.com/) and [Python](https://www.python.org/)
 
-Alternately, run the following command:
+If not, then it recommended to go to the [Running the Granite Notebooks Remotely (Colab)](#running-the-granite-notebooks-remotely-colab) section instead.
 
-```bash
-git clone https://github.com/IBM/workshop-template
-cd workshop-template
+Running the lab notebooks locally on your computer requires the following steps:
+
+- [Local Prerequisites](#local-prerequisites)
+- [Clone the Granite Timeseries Workshop Repository](#clone-the-granite-timeseries-workshop-repository)
+- [Serving the Granite AI Models](#serving-the-granite-ai-models)
+- [Install Jupyter](#install-jupyter)
+
+### Local Prerequisites
+
+- Git
+- Python 3.10, 3.11, or 3.12
+
+### Clone the Granite Timeseries Workshop Repository
+
+Clone the workshop repo and cd into the repo directory.
+
+```shell
+git clone https://github.com/IBM/granite-timeseries-workshop.git
+cd granite-timeseries-workshop
 ```
+
+### Serving the Granite AI Models
+
+<!-- Which timeseries labs need to be served by an AI model runtime? -->
+
+[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called. There are 2 options to serve the models as follows:
+
+- [Replicate AI Cloud Platform](#replicate-ai-cloud-platform)
+- [Running Ollama Locally](#running-ollama-locally) OR
+
+#### Replicate AI Cloud Platform
+
+[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
+
+1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
+
+1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
+
+1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
+
+1. Set your Replicate API Token as an environment variable in your terminal where you will run the notebook:
+
+    ```shell
+    export REPLICATE_API_TOKEN=<your_replicate_api_token>
+    ```
+
+#### Running Ollama Locally
+
+If you want to run the AI models locally on your computer, you can use [Ollama](https://ollama.com/). You will need to have a computer with:
+
+- GPU processor
+- At least 32GB RAM
+
+!!! note "Tested system"
+    This was tested on a Macbook with an M1 processor and 32GB RAM. It maybe possible to serve models with a CPU and less memory.
+
+If you computer is unable to serve the models, then it is recommended to go to the [Replicate AI Cloud Platform](#replicate-ai-cloud-platform) section instead.
+
+Running Ollama locally on your computer requires the following steps:
+
+1. [Download and install Ollama](https://github.com/ollama/ollama?tab=readme-ov-file#ollama), if you haven't already. **Ollama v0.3.14+ is required, so please upgrade if on an earlier version.**
+
+    On macOS, you can use Homebrew to install with
+
+    ```shell
+    brew install ollama
+    ```
+
+1. Start the Ollama server. You will leave this running during the workshop.
+
+    ```shell
+    ollama serve
+    ```
+
+1. In another terminal window, pull down the Granite models you will want to use in the workshop. Larger models take more memory to run but can give better results.
+
+    ```shell
+    ollama pull granite3.3:2b
+    ollama pull granite3.3:8b
+    ```
+
+<!-- Do we need this extra step for any of the timeseries labs? -->
+
+For [Lab 4: DO WE NEED THIS FOR ANY OF THE TIMESERIES LABS?](../lab-4/README.md), you will also need at least one of the following Granite Code models.
+
+    ```shell
+    ollama pull granite-code:3b
+    ollama pull granite-code:8b
+    ```
+
+### Install Jupyter
+
+!!! note "Use a virtual environment"
+    Before installing dependencies and to avoid conflicts in your environment, it is advisable to use a [virtual environment (venv)](https://docs.python.org/3/library/venv.html).
+
+1. Create virtual environment:
+
+    ```shell
+    python3 -m venv --upgrade-deps --clear venv
+    ```
+
+1. Activate the virtual environment by running:
+
+    ```shell
+    source venv/bin/activate
+    ```
+
+1. Install Jupyter notebook in the virtual environment:
+
+    ```shell
+    python3 -m pip install --require-virtualenv notebook ipywidgets
+    ```
+
+    For more information, see the [Jupyter installation instructions](https://jupyter.org/install)
+
+1. To open a notebook in Jupyter (in the active virtual environment), run:
+
+    ```shell
+    jupyter notebook <notebook-file-path>
+    ```
+
+## Running the Granite Notebooks Remotely (Colab)
+
+Running the lab notebooks remotely using [Google Colab](https://colab.research.google.com) requires the following steps:
+
+- [Colab Prerequisites](#colab-prerequisites)
+- [Serving the Granite AI Models for Colab](#serving-the-granite-ai-models-for-colab)
+
+### Colab Prerequisites
+
+- [Google Colab](https://colab.research.google.com) requires a Google account that you're logged into
+
+### Serving the Granite AI Models for Colab
+
+<!-- Which timeseries labs need to be served by an AI model runtime? -->
+
+[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
+
+#### Replicate AI Cloud Platform for Colab
+
+[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
+
+1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
+
+1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite Code models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
+
+1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
+
+1. Add your Replicate API Token to the Colab Secrets manager to securely store it. Open [Google Colab](https://colab.research.google.com) and click on the 🔑 Secrets tab in the left panel. Click "New Secret" and enter `REPLICATE_API_TOKEN` as the key, and paste your token into the value field. Toggle the button on the left to allow notebook access to the secret.

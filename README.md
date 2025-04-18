@@ -10,3 +10,4 @@ If you would like to see the detailed LICENSE click [here](./LICENSE).
 
 - Authors:
   - [Joe Sepi](https://github.com/joesepi)
+  - [Mo McElaney](https://github.com/mmcelaney)
