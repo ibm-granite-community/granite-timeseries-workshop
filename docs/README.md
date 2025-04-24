@@ -47,7 +47,6 @@ The technology used in the workshop is as follows:
 * [IBM Granite AI foundation models](https://www.ibm.com/granite)
 * [Jupyter notebooks](https://jupyter.org/)
 * [LangChain](https://www.langchain.com/)
-* [Ollama](https://ollama.com)
 * [Replicate](https://replicate.com/)
 
 ## Credits

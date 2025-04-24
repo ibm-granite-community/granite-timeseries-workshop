@@ -30,8 +30,6 @@ LLM
 Macbook
 McElaney
 Milvus
-ollama
-Ollama
 png
 pre
 Pre

@@ -51,10 +51,7 @@ cd granite-timeseries-workshop
 
 <!-- Which timeseries labs need to be served by an AI model runtime? -->
 
-[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called. There are 2 options to serve the models as follows:
-
-- [Replicate AI Cloud Platform](#replicate-ai-cloud-platform)
-- [Running Ollama Locally](#running-ollama-locally) OR
+[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
 
 #### Replicate AI Cloud Platform
 
@@ -70,50 +67,6 @@ cd granite-timeseries-workshop
 
     ```shell
     export REPLICATE_API_TOKEN=<your_replicate_api_token>
-    ```
-
-#### Running Ollama Locally
-
-If you want to run the AI models locally on your computer, you can use [Ollama](https://ollama.com/). You will need to have a computer with:
-
-- GPU processor
-- At least 32GB RAM
-
-!!! note "Tested system"
-    This was tested on a Macbook with an M1 processor and 32GB RAM. It maybe possible to serve models with a CPU and less memory.
-
-If you computer is unable to serve the models, then it is recommended to go to the [Replicate AI Cloud Platform](#replicate-ai-cloud-platform) section instead.
-
-Running Ollama locally on your computer requires the following steps:
-
-1. [Download and install Ollama](https://github.com/ollama/ollama?tab=readme-ov-file#ollama), if you haven't already. **Ollama v0.3.14+ is required, so please upgrade if on an earlier version.**
-
-    On macOS, you can use Homebrew to install with
-
-    ```shell
-    brew install ollama
-    ```
-
-1. Start the Ollama server. You will leave this running during the workshop.
-
-    ```shell
-    ollama serve
-    ```
-
-1. In another terminal window, pull down the Granite models you will want to use in the workshop. Larger models take more memory to run but can give better results.
-
-    ```shell
-    ollama pull granite3.3:2b
-    ollama pull granite3.3:8b
-    ```
-
-<!-- Do we need this extra step for any of the timeseries labs? -->
-
-For [Lab 4: DO WE NEED THIS FOR ANY OF THE TIMESERIES LABS?](../lab-4/README.md), you will also need at least one of the following Granite Code models.
-
-    ```shell
-    ollama pull granite-code:3b
-    ollama pull granite-code:8b
     ```
 
 ### Install Jupyter
