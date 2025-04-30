@@ -12,12 +12,12 @@ demonstrates the value of [timeseries forecasting](https://www.ibm.com/think/ins
 
 By the end of this workshop, you will be able to:
 
-* Energy Demand Forecasting with Granite Time Series (TTM)
-* Energy Demand Forecasting with Granite Time Series - Preprocessor Use and Performance Evaluation
-* Energy Demand Forecasting with Granite Time Series - Few-shot Fine-tuning and Evaluation
-* Transportation Demand Forecasting with Granite Time Series - Zero-shot Inference and Fine-tuning with Exogenous Inputs
-* Getting Started with Time Series Models on IBM watsonx
-* Retail Sales Forecasting using the M5 dataset with Granite Time Series - Few-shot fine tuning, evaluation, and visualization
+* Predict future trends using time series forecasting
+* Train a Preprocessor and evaluating the model and evaluate the performance of the model on a real-world dataset containing energy demand data
+* Move beyond zero-shot prediction to few-shot fine-tuning and prediction
+* Combine zero-shot inference and fine-tuning with exogenous inputs
+* Use the watsonx SDK to perform inference calls against a model hosted remotely
+* Employ few-shot fine tuning, evaluation, and visualization of retail sales data forecasting
 
 ### About this workshop
 
