@@ -21,7 +21,9 @@ This lab is a [Jupyter notebook](https://jupyter.org/). Please follow the instru
 
 To run the notebook from your command line in Jupyter using the active virtual environment from the pre-work, run:
 
+```shell
 jupyter notebook notebooks/Preprocessor_Use_and_Performance_Evaluation.ipynb
+```
 
 The path of the notebook file above is relative to the granite-workshop folder from the git clone in the pre-work.
 
