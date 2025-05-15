@@ -6,7 +6,7 @@ This is the Granite foundation models AI time-series workshop hosted on GitHub P
 
 ## License & Authors
 
-If you would like to see the detailed LICENSE click [here](./LICENSE).
+See the [LICENSE](./LICENSE) file for the details of the license.
 
 - Authors:
   - [Joe Sepi](https://github.com/joesepi)
