@@ -40,7 +40,7 @@ permissions:
 jobs:
   test_workflow_ready:
     # Don't run schedule target in forks
-    if: ${{ (github.event_name != 'schedule') || (github.repository_owner == 'ibm') }}
+    if: ${{ (github.event_name != 'schedule') || (github.repository_owner == 'ibm-granite-community') }}
     permissions:
       pull-requests: write
       statuses: write
