@@ -43,7 +43,7 @@ Running the lab notebooks locally on your computer requires the following steps:
 Clone the workshop repo and cd into the repo directory.
 
 ```shell
-git clone https://github.com/IBM/granite-timeseries-workshop.git
+git clone https://github.com/ibm-granite-community/granite-timeseries-workshop.git
 cd granite-timeseries-workshop
 ```
 
