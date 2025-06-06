@@ -53,22 +53,6 @@ cd granite-timeseries-workshop
 
 [Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
 
-#### Replicate AI Cloud Platform
-
-[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
-
-1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
-
-1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
-
-1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
-
-1. Set your Replicate API Token as an environment variable in your terminal where you will run the notebook:
-
-    ```shell
-    export REPLICATE_API_TOKEN=<your_replicate_api_token>
-    ```
-
 ### Install Jupyter
 
 !!! note "Use a virtual environment"
@@ -116,15 +100,3 @@ Running the lab notebooks remotely using [Google Colab](https://colab.research.g
 <!-- Which timeseries labs need to be served by an AI model runtime? -->
 
 [Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
-
-#### Replicate AI Cloud Platform for Colab
-
-[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
-
-1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
-
-1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite Code models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
-
-1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
-
-1. Add your Replicate API Token to the Colab Secrets manager to securely store it. Open [Google Colab](https://colab.research.google.com) and click on the 🔑 Secrets tab in the left panel. Click "New Secret" and enter `REPLICATE_API_TOKEN` as the key, and paste your token into the value field. Toggle the button on the left to allow notebook access to the secret.
