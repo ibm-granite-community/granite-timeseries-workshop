@@ -30,7 +30,6 @@ Running the lab notebooks locally on your computer requires the following steps:
 
 - [Local Prerequisites](#local-prerequisites)
 - [Clone the Granite Timeseries Workshop Repository](#clone-the-granite-timeseries-workshop-repository)
-- [Serving the Granite AI Models](#serving-the-granite-ai-models)
 - [Install Jupyter](#install-jupyter)
 
 ### Local Prerequisites
@@ -87,5 +86,3 @@ Running the lab notebooks remotely using [Google Colab](https://colab.research.g
 ### Colab Prerequisites
 
 - [Google Colab](https://colab.research.google.com) requires a Google account that you're logged into
-
-
