@@ -30,7 +30,6 @@ Running the lab notebooks locally on your computer requires the following steps:
 
 - [Local Prerequisites](#local-prerequisites)
 - [Clone the Granite Timeseries Workshop Repository](#clone-the-granite-timeseries-workshop-repository)
-- [Serving the Granite AI Models](#serving-the-granite-ai-models)
 - [Install Jupyter](#install-jupyter)
 
 ### Local Prerequisites
@@ -46,12 +45,6 @@ Clone the workshop repo and cd into the repo directory.
 git clone https://github.com/ibm-granite-community/granite-timeseries-workshop.git
 cd granite-timeseries-workshop
 ```
-
-### Serving the Granite AI Models
-
-<!-- Which timeseries labs need to be served by an AI model runtime? -->
-
-[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
 
 ### Install Jupyter
 
@@ -89,14 +82,7 @@ cd granite-timeseries-workshop
 Running the lab notebooks remotely using [Google Colab](https://colab.research.google.com) requires the following steps:
 
 - [Colab Prerequisites](#colab-prerequisites)
-- [Serving the Granite AI Models for Colab](#serving-the-granite-ai-models-for-colab)
 
 ### Colab Prerequisites
 
 - [Google Colab](https://colab.research.google.com) requires a Google account that you're logged into
-
-### Serving the Granite AI Models for Colab
-
-<!-- Which timeseries labs need to be served by an AI model runtime? -->
-
-[Lab 1: Energy Demand Forecasting Basic Inference](../lab-1/README.md), [Lab 2: Energy Demand Forecasting Preprocessing and Performance Evaluation](../lab-2/README.md), [Lab 3: Energy Demand Forecasting Few-shot Fine-tuning](../lab-3/README.md), [Lab 4: Bike Sharing Forecasting Zero-shot, Fine-tuning, and Performance Evaluation](../lab-4/README.md), [Lab 5: Getting Started with Watson X AI SDK](../lab-5/README.md), and [Lab 6: Retail Forecasting using M5 Sales Data Few-shot, Fine-tuning, Evaluation, and Visualization](../lab-6/README.md), require Granite models to be served by an AI model runtime so that the models can be invoked or called.
