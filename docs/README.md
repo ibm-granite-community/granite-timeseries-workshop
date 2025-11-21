@@ -29,11 +29,11 @@ The introductory page of the workshop is broken down into the following sections
 
 ## Agenda
 
-|  |  |
+| | |
 | :--- | :--- |
-| [Lab 0: Pre-work](pre-work/README.md)  | Pre-work for the workshop |
+| [Lab 0: Pre-work](pre-work/README.md) | Pre-work for the workshop |
 | [Lab 1: Energy Demand Forecasting - Basic Inference](lab-1/README.md) | Getting started with TTMs. |
-| [Lab 2: Energy Demand Forecasting - Preprocessing and Performance Evaluation](lab-2/README.md)| Learn about preprocessing and performance evaluation. |
+| [Lab 2: Energy Demand Forecasting - Preprocessing and Performance Evaluation](lab-2/README.md) | Learn about preprocessing and performance evaluation. |
 | [Lab 3: Energy Demand Forecasting - Few-shot Fine-tuning](lab-3/README.md) | Learn about few-shot Fine-tuning. |
 | [Lab 4: Bike Sharing Forecasting - Zero-shot, Fine-tuning, and Performance Evaluation](lab-4/README.md) | Learn about zero-shot forecasting as well as fine-tuning using a Kaggle bike-sharing dataset. |
 | [Lab 5: Getting Started with Watson X AI SDK](lab-5/README.md) | Use the watsonx SDK to perform inference calls against a model hosted remotely on watsonx. |
