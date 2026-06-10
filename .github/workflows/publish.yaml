@@ -11,8 +11,8 @@ on:
       - 'data/**'
       - 'docs/**'
       - 'notebooks/**'
-      - 'mkdocs.yml'
-      - '.github/workflows/publish.yml' # This workflow
+      - 'mkdocs.ya?ml'
+      - '.github/workflows/publish.ya?ml' # This workflow
   workflow_dispatch:
 
 env:
@@ -24,8 +24,6 @@ defaults:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -50,13 +48,15 @@ jobs:
 
       - name: 'Checkout'
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
 
       - name: 'Setup Pages'
         if: ${{ github.event_name != 'pull_request' }}
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
-      - name: 'Setup uv'
-        uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+      - name: 'Setup Python'
+        uses: ./.github/actions/python_setup
         with:
           python-version: 3.12
           enable-cache: false
@@ -72,12 +72,15 @@ jobs:
           path: 'site/' # mkdocs default site_dir
 
   publish:
+    needs: build
+    if: ${{ github.event_name != 'pull_request' }}
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
-    if: ${{ github.event_name != 'pull_request' }}
     steps:
       - name: "Harden Runner"
         uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4

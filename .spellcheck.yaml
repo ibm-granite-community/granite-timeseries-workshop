@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+
+spellchecker: aspell
+
 matrix:
 - name: markdown
   aspell:
@@ -24,4 +28,3 @@ matrix:
       # Ignore text between inline back ticks
       - open: '(?P<open>`+)'
         close: '(?P=open)'
-
