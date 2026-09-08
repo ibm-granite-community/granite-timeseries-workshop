@@ -1,6 +1,6 @@
 notebooks/Bike_Sharing_Finetuning_with_Exogenous.ipynb
 notebooks/Few-shot_Finetuning_and_Evaluation.ipynb
-notebooks/Getting_Started_with_WatsonX_AI_SDK.ipynb
+# notebooks/Getting_Started_with_WatsonX_AI_SDK.ipynb
 notebooks/M5_retail_sales_forecasting.ipynb
 notebooks/Preprocessor_Use_and_Performance_Evaluation.ipynb
 notebooks/Time_Series_Getting_Started.ipynb
